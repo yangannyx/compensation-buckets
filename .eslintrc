@@ -1,0 +1,25 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": false
+  },
+  "extends": ["airbnb-base", "airbnb/rules/react", "prettier"],
+  "plugins": ["react", "prettier"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "rules": {
+    "max-len": ["error", { "code": 100 }],
+    "prefer-promise-reject-errors": ["off"],
+    "import/prefer-default-export": ["off"],
+    "react/jsx-filename-extension": ["off"],
+    "react/jsx-closing-bracket-location": [1, "tag-aligned"],
+    "react/prop-types": ["off"],
+    "no-return-assign": ["off"]
+  }
+}
