@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import { AutocompleteInput } from './components/autocomplete-input';
-import { COUNTRIES } from './lib/fixtures/countries';
+import { HelloWorld } from './components/hello-world';
 
 function App() {
   return (
     <div className="App">
-      <AutocompleteInput options={COUNTRIES} />
+      <HelloWorld />
     </div>
   );
 }
