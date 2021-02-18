@@ -19,7 +19,10 @@
     "import/prefer-default-export": ["off"],
     "react/jsx-filename-extension": ["off"],
     "react/jsx-closing-bracket-location": [1, "tag-aligned"],
+    "arrow-body-style": ["off"],
     "react/prop-types": ["off"],
-    "no-return-assign": ["off"]
+    "no-return-assign": ["off"],
+    "no-unused-vars": ["off"],
+    "react/jsx-one-expression-per-line": ["off"]
   }
 }
