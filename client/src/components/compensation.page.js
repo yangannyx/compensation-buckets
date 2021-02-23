@@ -1,4 +1,5 @@
 import React from 'react';
+import { getResource } from '../lib/data-fetch/data-fetch';
 import { GAMINE_DATA } from '../lib/fixtures/restaurant-pay/gamine';
 import { CompensationChart } from './compenstaion-chart';
 import { OrgList } from './org-list';
@@ -15,6 +16,12 @@ export const Compensation = () => {
   const onBucketSelect = ({ employees }) => {
     setEmployeeBucket(employees);
   };
+
+  const [data, setData] = React.useState('');
+
+  React.useEffect(() => {
+    getResource().then((resp) => setData(resp ? resp.express : ''));
+  }, []);
 
   return (
     <div>
@@ -39,6 +46,7 @@ export const Compensation = () => {
         bucketClickCallback={onBucketSelect}
       />
       <OrgList employees={employeeBucket} />
+      <div>{data}</div>
     </div>
   );
 };
